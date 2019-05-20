@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\salarie;
 
 class SalarieController extends Controller
 {
@@ -24,7 +25,7 @@ class SalarieController extends Controller
     public function create()
     {
 
-       return view('salaries_create');
+       return view('salarie_create');
     }
 
     /**
@@ -35,15 +36,15 @@ class SalarieController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'salarie_nom'=>'required',
-            'salarie_prenom'=>'required',
-            'salarie_sexe'=> 'required',
-            'salarie_date_naissance' => 'required',
-            'salarie_id_niveau' => 'required',
-            'salarie_id_suivi' => 'required'
-          ]);
-          $salarie = new Salarie([
+        // $request->validate([
+        //     'salarie_nom'=>'required',
+        //     'salarie_prenom'=>'required',
+        //     'salarie_sexe'=> 'required',
+        //     'salarie_date_naissance' => 'required',
+        //     'salarie_id_niveau' => 'required',
+        //     'salarie_id_suivi' => 'required'
+        //   ]);
+          $salarie = new salarie([
             'salarie_nom'=> $request->get('salarie_nom'),
             'salarie_prenom'=> $request->get('salarie_prenom'),
             'salarie_sexe'=> $request->get('salarie_sexe'),
@@ -52,7 +53,7 @@ class SalarieController extends Controller
             'salarie_id_suivi' => $request->get('salarie_id_suivi')
           ]);
           $salarie->save();
-          return redirect('/salaries')->with('Success', 'La valeur a été ajouté');
+          return redirect('/salarie')->with('Success', 'La valeur a été ajouté');
     }
 
     /**
