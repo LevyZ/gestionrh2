@@ -33,8 +33,8 @@
           </div>
           <div class="form-group">
               <label for="sexe">Sexe: </label>
-              <input type="radio" class="form-control" name="salarie_sexe"/>F<br>
-              <input type="radio" class="form-control" name="salarie_sexe"/>M
+              <input type="radio" class="form-control" name="salarie_sexe" value="F"/>F<br>
+              <input type="radio" class="form-control" name="salarie_sexe" value="M"/>M
           </div>
           <div class="form-group">
               <label for="date_naissance">Date de naissance: </label>
