@@ -23,4 +23,4 @@ Route::get('/test', function () {
 
 // Route::get('/salaries/create', 'SalarieController@create')->name('create');
 
-Route::resource('salaries', 'SalarieController');
+Route::resource('salarie', 'SalarieController');
