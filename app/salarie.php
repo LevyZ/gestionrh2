@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class salarie extends Model
 {
+
+    protected $table = 'salarie';
     protected $fillable = [
         'nom',
         'prenom',
@@ -13,5 +15,7 @@ class salarie extends Model
         'date_naissance',
         'id_niveau',
         'id_suivi'
-    ];
+    ];  
+
+    public $timestamps = false;
 }
