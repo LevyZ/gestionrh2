@@ -14,7 +14,9 @@ class SalarieController extends Controller
      */
     public function index()
     {
-        //
+        $salaries = salarie::all();
+
+        return view('salarie_index', compact('salaries'));
     }
 
     /**
@@ -73,9 +75,11 @@ class SalarieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id_salarie)
     {
-        //
+        $salarie = salarie::find($id_salarie);
+
+        return view('salarie_edit', compact('salarie'));
     }
 
     /**
@@ -85,9 +89,18 @@ class SalarieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id_salarie)
     {
-        //
+        $salarie = salarie::find($id_salarie);
+        $salarie->nom = $request->get('salarie_nom');
+        $salarie->prenom = $request->get('salarie_prenom');
+        $salarie->sexe = $request->get('salarie_sexe');
+        $salarie->date_naissance = $request->get('salarie_date_naissance');
+        $salarie->id_niveau = $request->get('salarie_id_niveau');
+        $salarie->id_suivi = $request->get('salarie_id_suivi');
+        $share->save();
+  
+        return redirect('/salarie')->with('success', 'Stock has been updated');
     }
 
     /**

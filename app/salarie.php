@@ -8,6 +8,7 @@ class salarie extends Model
 {
 
     protected $table = 'salarie';
+    protected $primaryKey = 'id_salarie';
     protected $fillable = [
         'nom',
         'prenom',
