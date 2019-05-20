@@ -14,4 +14,7 @@ class salarie extends Model
         'id_niveau',
         'id_suivi'
     ];
+
+    protected $table = 'salarie';
+    public $timestamps = false;
 }

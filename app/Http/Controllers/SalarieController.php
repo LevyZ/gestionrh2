@@ -45,12 +45,12 @@ class SalarieController extends Controller
         //     'salarie_id_suivi' => 'required'
         //   ]);
           $salarie = new salarie([
-            'salarie_nom'=> $request->get('salarie_nom'),
-            'salarie_prenom'=> $request->get('salarie_prenom'),
-            'salarie_sexe'=> $request->get('salarie_sexe'),
-            'salarie_date_naissance' => $request->get('salarie_date_naissance'),
-            'salarie_id_niveau' => $request->get('salarie_id_niveau'),
-            'salarie_id_suivi' => $request->get('salarie_id_suivi')
+            'nom'=> $request->get('salarie_nom'),
+            'prenom'=> $request->get('salarie_prenom'),
+            'sexe'=> $request->get('salarie_sexe'),
+            'date_naissance' => $request->get('salarie_date_naissance'),
+            'id_niveau' => $request->get('salarie_id_niveau'),
+            'id_suivi' => $request->get('salarie_id_suivi')
           ]);
           $salarie->save();
           return redirect('/salarie')->with('Success', 'La valeur a été ajouté');
