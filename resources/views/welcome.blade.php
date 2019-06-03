@@ -88,6 +88,7 @@
                     <a href="{{ url('/salarie') }}">Salariés</a>
                     <a href="https://laracasts.com">Absence</a>
                     <a href="https://laravel-news.com">Candidats</a>
+                    <a href="{{ url('/analyse') }}">Analyse de données</a>
                 </div>
             </div>
         </div>

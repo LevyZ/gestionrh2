@@ -21,6 +21,9 @@ Route::get('/test', function () {
     return view('view_test');
 });
 
+Route::get('/analyse', function () {
+    return view('analyse');
+});
 
 // Route::get('/salaries/create', 'SalarieController@create')->name('create');
 

@@ -116,6 +116,6 @@ class SalarieController extends Controller
         var_dump($salarie);
         $salarie->delete();
 
-        // return redirect('/salarie')->with('success', 'Le salarié a été correctement supprimé');
+        return redirect('/salarie')->with('success', 'Le salarié a été correctement supprimé');
     }
 }
