@@ -37,10 +37,10 @@
             <td>{{$salarie->id_suivi}}</td>
             <td><a href="{{ route('salarie.edit', $salarie->id_salarie)}}" class="btn btn-primary">Edit</a></td>
             <td>
-                <form action="{{ route('salarie.destroy', $salarie->id_salarie)}}" method="post">
+                <form action="{{ route('salarie.destroy', $salarie->id_salarie)}}" method="delete">
                   {{-- @csrf --}}
                   {{-- @method('DELETE') --}}
-                  <button class="btn btn-danger" type="submit">Delete</button>
+                  <button class="btn btn-danger"  type="submit">Delete</button>
                 </form>
             </td>
         </tr>

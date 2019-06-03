@@ -109,8 +109,13 @@ class SalarieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id_salarie)
     {
-        //
+        $salarie = salarie::find($id_salarie);
+        dd($salarie);
+        var_dump($salarie);
+        $salarie->delete();
+
+        // return redirect('/salarie')->with('success', 'Le salarié a été correctement supprimé');
     }
 }
