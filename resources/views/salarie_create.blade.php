@@ -23,8 +23,9 @@
     {{-- action="{{ route('salaries.store') }}" --}}
       <form method="post" action="{{ route('salarie.store') }}">
 
-          <input type="hidden" name="_token" value="{{ csrf_token() }}">          <div class="form-group">
-          <label for="nom">Nom:</label>
+          <input type="hidden" name="_token" value="{{ csrf_token() }}">          
+          <div class="form-group">
+              <label for="nom">Nom:</label>
               <input type="text" class="form-control" name="salarie_nom"/>
           </div>
           <div class="form-group">

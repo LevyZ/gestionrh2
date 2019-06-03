@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('salaries/create') }}">Salariés</a>
+                    <a href="{{ url('/salarie') }}">Salariés</a>
                     <a href="https://laracasts.com">Absence</a>
                     <a href="https://laravel-news.com">Candidats</a>
                 </div>

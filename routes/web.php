@@ -21,6 +21,7 @@ Route::get('/test', function () {
     return view('view_test');
 });
 
+
 // Route::get('/salaries/create', 'SalarieController@create')->name('create');
 
 Route::resource('salarie', 'SalarieController');
